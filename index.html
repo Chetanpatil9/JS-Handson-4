@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question Javascript 4</title>
+</head>
+<body>
+    <h1>JS Question - 4</h1>
+
+    <b>Ques 1. Find the Product.</b><br>
+    <pre><b> Ans.</b>
+    const Find_Prod = (array, N) => 
+    {
+     
+          let product = 1
+     for(let i = 0; i < N; i++)
+     product = product * array[i]
+     return product;  
+    
+    };
+    </pre>
+
+ <b>Ques 2. Find the Sum.</b><br>
+ <pre><b> Ans.</b>
+    const Find_Sum = (array, N) => 
+    {
+      let sum = 0
+    for(i = 0; i < N; i++)
+    sum = sum + array[i]
+    return sum;
+    
+    };
+</pre>
+
+ <b>Ques 3. Count Occurrences.</b><br>
+ <pre><b> Ans.</b>
+    const findCount = (N, K, Arr) => 
+    {
+        let count=0;
+    for(let i=0;i< N;i++){
+      if(Arr[i]== K){
+        count=count+1;
+      }
+    }
+    return count;
+    };
+ </pre>
+
+ <b>Ques 4. Even Odd.</b><br>
+ <pre><b> Ans.</b>
+    const findEvenOdd = (N, Arr) => 
+    {
+        let A=[2]
+        let even=0
+        let odd=0
+        for(let i=0;i< N;i++){
+          if(Arr[i]%2===0){
+            even+=Arr[i]
+          }
+          else{
+            odd+=Arr[i]
+          }
+        }
+        
+        A[0]=even
+        A[1]=odd
+        return A
+    };
+ </pre>
+
+ <b>Ques 5. Find whether the number is present or not.</b><br>
+ <pre><b> Ans.</b>
+    const Find_Num = (array,N,M) => 
+    {
+      
+          let count=0;
+          for(let p of array){
+            if(p===M){
+              count+=1
+            }
+          }
+          if(count>0){
+            return "YES";
+          }
+          else{
+            return "NO"
+          }
+    };
+ </pre>
+     
+ <b>Ques 6. Higher Age.</b><br>
+ <pre><b> Ans.</b>
+    const highAge = (N, Arr) => 
+    {
+       let arr=[];
+      let j=0;
+      for(let i=0;i< N;i++){
+        if(Arr[i]>=18){
+          arr[j++]=Arr[i]; 
+    }
+    }
+    return arr;  
+    };
+</pre>
+
+ <b>Ques 7. Increment the Array Elements.</b><br>
+ <pre><b> Ans.</b>
+    const Inc_Arr = (array,N) => 
+    {
+      
+      let Increment=[]
+      let result=""
+      let j=0
+      for(let i=0;i< N;i++){
+       Increment[j]=array[i]+1
+        result=result+" "+Increment[j]
+        j++
+      }
+     console.log(result)
+    
+    };
+ </pre>
+ 
+ <b>Ques 8. Pass or Fail.</b><br>
+ <pre><b> Ans.</b>
+    const isAllPass = (N, Arr) => 
+    {
+        for(var i=0; i< Arr.length; i++){
+        if(Arr[i] < 32){
+          return "NO";
+        }
+      }
+      return "YES";   
+    }; 
+ </pre>  
+    
+ <b>Ques 9. Unique Color Shirt.</b><br>
+ <pre><b> Ans.</b>
+    function Unique_Shirts (arr,N) {
+     let temp=""
+          let dress=0;
+          let i,j;
+          for(i=0;i< N;i++){
+              let compare=0;
+              for(j=0;j< N;j++){
+                  if(arr[i]==arr[j]){
+                      compare++;
+                  }
+              }
+              if(compare==1){
+                  temp=temp+arr[i];
+                  dress++;
+              }
+      }
+      return dress;
+     
+    }
+ </pre>
+
+ <b>Ques 10. Min and Max.</b><br>
+ <pre><b> Ans.</b>
+    function arrayMin(arr) {
+     let a=Math.min(...arr);
+          return a; 
+  
+  }
+  
+  function arrayMax(arr) {
+   let b=Math.max(...arr);
+          return b; 
+  
+  } 
+ </pre>
+ <b>Ques 11. Birthday Game.</b><br>
+ <pre><b> Ans.</b>
+    function Birthday_Game(arr,D ,M) {
+     let counter = 0;
+            for(let i = 0; i < arr.length - 1; i++){
+                 let subArray = arr.slice(i, i+M);
+                 if (subArray.length === M) {
+                    let sum = subArray.reduce((a,b) => a + b, 0);
+                    if(sum === D){
+                         counter += 1;
+                     }
+                  }
+            }
+            return counter;
+   
+   } 
+</pre>
+</body>
+</html>
